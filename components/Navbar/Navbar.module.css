@@ -43,6 +43,23 @@
   color: var(--color-bordo);
   cursor: pointer;
   text-decoration: none;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--color-bordo);
+  transition: width 0.3s ease;
+}
+
+.link:hover::after {
+  width: 100%;
 }
 
 .cta {
