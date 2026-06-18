@@ -5,6 +5,13 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import styles from "./Navbar.module.css";
 
+const links = [
+  { label: "Inicio", href: "#inicio" },
+  { label: "Nuestro Modelo", href: "#nuestro-modelo" },
+  { label: "Marcas", href: "#marcas" },
+  { label: "Accesos", href: "#accesos" },
+];
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const router = useRouter();
@@ -29,13 +36,15 @@ export default function Navbar() {
       </div>
 
       <div className={styles.links}>
-        {["Vinos", "Bodegas", "Nosotros"].map((item) => (
-          <span key={item} className={styles.link}>{item}</span>
+        {links.map((item) => (
+          <a key={item.label} href={item.href} className={styles.link}>
+            {item.label}
+          </a>
         ))}
       </div>
 
-      <span onClick={() => router.push("/auth/register")} className={styles.cta}>
-        Registrarse
+      <span onClick={() => router.push("/auth/login")} className={styles.cta}>
+        Ingresar
       </span>
     </nav>
   );

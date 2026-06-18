@@ -38,10 +38,10 @@ export default function NuestroModelo() {
     <section ref={sectionRef} className={styles.section}>
       <div ref={imgRef} className={styles.imgWrapper}>
         <Image
-          src="/rock-vinos-2.png"
+          src="/rockyvino2.png"
           alt="Nuestro modelo"
           fill
-          style={{ objectFit: "cover", objectPosition: "center" }}
+          style={{ objectFit: "contain", objectPosition: "center top" }}
         />
         <div className={styles.imgOverlay} />
       </div>

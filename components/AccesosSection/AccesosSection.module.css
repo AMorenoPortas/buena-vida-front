@@ -1,0 +1,141 @@
+.section {
+  background: var(--color-bordo-dark);
+  padding: 100px 80px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.tagLine {
+  width: 28px;
+  height: 1px;
+  background: var(--color-gold);
+}
+
+.tagText {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+.title {
+  font-family: var(--font-title);
+  font-size: 36px;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--color-cream);
+  margin-bottom: 8px;
+}
+
+.titleAccent {
+  color: var(--color-gold);
+}
+
+.sub {
+  font-size: 13px;
+  color: var(--color-cream);
+  opacity: 0.6;
+  letter-spacing: 0.05em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: var(--color-cream);
+  border-radius: 4px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 0.5px solid transparent;
+}
+
+.card:hover {
+  border-color: var(--color-gold);
+  transform: translateY(-4px);
+}
+
+.cardFeatured {
+  background: var(--color-bordo);
+}
+
+.iconWrapper {
+  width: 44px;
+  height: 44px;
+  border-radius: 4px;
+  background: rgba(122, 32, 64, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.iconWrapperFeatured {
+  background: rgba(245, 240, 232, 0.2);
+}
+
+.icon {
+  font-size: 22px;
+  color: var(--color-bordo);
+}
+
+.iconFeatured {
+  color: var(--color-cream);
+}
+
+.cardTitle {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-bordo-dark);
+  margin-bottom: 4px;
+}
+
+.cardTitleFeatured {
+  color: var(--color-cream);
+}
+
+.cardDesc {
+  font-size: 13px;
+  color: var(--color-bordo-dark);
+  opacity: 0.7;
+  line-height: 1.6;
+  flex: 1;
+}
+
+.cardDescFeatured {
+  color: var(--color-cream);
+  opacity: 0.8;
+}
+
+.cardLink {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-bordo);
+  font-weight: 500;
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cardLinkFeatured {
+  color: var(--color-gold);
+}

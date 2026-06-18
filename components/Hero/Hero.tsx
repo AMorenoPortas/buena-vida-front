@@ -46,7 +46,7 @@ export default function Hero() {
 
       <div className={styles.right}>
         <Image
-          src="/rock-vinos.png"
+          src="/rockyvino.png"
           alt="Vinos y rock"
           fill
           style={{ objectFit: "cover", objectPosition: "center" }}

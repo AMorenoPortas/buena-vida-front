@@ -42,6 +42,7 @@
   text-transform: uppercase;
   color: var(--color-bordo);
   cursor: pointer;
+  text-decoration: none;
 }
 
 .cta {
