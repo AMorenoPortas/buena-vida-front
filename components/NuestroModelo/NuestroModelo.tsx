@@ -53,8 +53,8 @@ export default function NuestroModelo() {
         </div>
 
         <h2 className={styles.title}>
-          Más que representante,<br />
-          <span className={styles.titleAccent}>somos su socio estratégico.</span>
+          Modelo operativo<br />
+          <span className={styles.titleAccent}>y propuesta de valor.</span>
         </h2>
 
         <p className={styles.text}>

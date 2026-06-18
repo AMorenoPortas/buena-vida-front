@@ -58,7 +58,7 @@ export default function MarcasCarrusel() {
           <span className={styles.tagText}>Nuestras marcas</span>
         </div>
         <h2 ref={titleRef} className={styles.title}>
-          Marcas que confían <span className={styles.titleAccent}>en nosotros</span>
+          Marcas <span className={styles.titleAccent}>con propósito.</span>
         </h2>
       </div>
 

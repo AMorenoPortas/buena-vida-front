@@ -1,7 +1,12 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "./AccesosSection.module.css";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const accesos = [
   {
@@ -40,6 +45,26 @@ const accesos = [
 
 export default function AccesosSection() {
   const router = useRouter();
+  const cardsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!cardsRef.current) return;
+    const cards = cardsRef.current.querySelectorAll(`.${styles.card}`);
+    gsap.fromTo(cards,
+      { opacity: 0, y: 60 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.6,
+        stagger: 0.15,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: cardsRef.current,
+          start: "top 85%",
+        }
+      }
+    );
+  }, []);
 
   return (
     <section id="accesos" className={styles.section}>
@@ -55,7 +80,7 @@ export default function AccesosSection() {
         <p className={styles.sub}>Seleccioná tu perfil para ingresar a la plataforma</p>
       </div>
 
-      <div className={styles.grid}>
+      <div ref={cardsRef} className={styles.grid}>
         {accesos.map(item => (
           <div
             key={item.key}
